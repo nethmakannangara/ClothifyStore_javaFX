@@ -49,8 +49,6 @@ public class AddAdminFormController implements Initializable {
         }
     }
 
-
-
     private boolean checkEmail() {
         if (service.checkDuplicateEmail(txtAdminEmail.getText())) {
             return true;
