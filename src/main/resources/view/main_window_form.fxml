@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="461.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="195.0" layoutY="28.0" prefHeight="53.0" prefWidth="252.0" text="Clothing Store">
+         <font>
+            <Font name="Berlin Sans FB" size="36.0" />
+         </font>
+      </Label>
+      <JFXTextField layoutX="28.0" layoutY="116.0" />
+      <JFXButton fx:id="btnAddAdmin" layoutX="233.0" layoutY="174.0" onAction="#btnAddAdminOnAction" prefHeight="25.0" prefWidth="165.0" text="Add Admin" />
+      <JFXButton fx:id="btnAddItem" layoutX="233.0" layoutY="206.0" onAction="#btnAddItemOnAction" prefHeight="25.0" prefWidth="165.0" text="Add Item" />
+      <JFXButton fx:id="btnAddSupplier" layoutX="233.0" layoutY="231.0" onAction="#btnAddSupplierOnAction" prefHeight="25.0" prefWidth="165.0" text="Add Supplier" />
+      <JFXButton fx:id="btnPlaceOrder" layoutX="233.0" layoutY="270.0" onAction="#btnPlaceOrderOnAction" prefHeight="25.0" prefWidth="165.0" text="Place Order" />
+   </children>
+</AnchorPane>
