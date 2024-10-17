@@ -13,4 +13,6 @@ public interface ItemService {
     void delete(String itemCode);
 
     void update(Item updateItem);
+
+    Item search(String itemCode);
 }

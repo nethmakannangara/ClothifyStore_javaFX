@@ -113,4 +113,24 @@ public class ItemController implements ItemService{
             throw new RuntimeException(e);
         }
     }
+
+    public Item search(String itemCode){
+        String SQL = "SELECT * FROM item WHERE itemCode = ?";
+        Item searchItem = null ;
+        try {
+            ResultSet resultSet = CrudUtil.execute(SQL, itemCode);
+            while (resultSet.next()){
+                searchItem = new Item(
+                        resultSet.getString("itemCode"),
+                        resultSet.getString("description"),
+                        resultSet.getDouble("unitPrice"),
+                        resultSet.getString("size"),
+                        resultSet.getInt("qtyOnHand")
+                        );
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return searchItem;
+    }
 }

@@ -63,6 +63,14 @@ public class MainWindowFormController {
 
     @FXML
     void btnPlaceOrderOnAction(ActionEvent event) {
+        Stage placeOrderStage;
+        try {
+            placeOrderStage = new Stage();
+            placeOrderStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/place_order_form.fxml"))));
+            placeOrderStage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
