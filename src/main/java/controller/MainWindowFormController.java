@@ -37,11 +37,27 @@ public class MainWindowFormController {
 
     @FXML
     void btnAddItemOnAction(ActionEvent event) {
+        Stage itemStage;
+        try {
+            itemStage = new Stage();
+            itemStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/item_form.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        itemStage.show();
 
     }
 
     @FXML
     void btnAddSupplierOnAction(ActionEvent event) {
+        Stage supplierForm;
+        try {
+            supplierForm = new Stage();
+            supplierForm.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/supplier_form.fxml"))));
+            supplierForm.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

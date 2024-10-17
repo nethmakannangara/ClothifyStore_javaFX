@@ -1,9 +1,16 @@
 package model;
 
+import lombok.*;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class Item {
-    private String itemId;
-    private String name;
-    private Double price;
+    private String itemCode;
+    private String description;
+    private Double UnitPrice;
     private String size;
-    private Integer quantityOnHand;
+    private Integer qtyOnHand;
 }
